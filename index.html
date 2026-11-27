@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="EmprendePuebla Digital: herramientas digitales, catálogos y capacitación para impulsar micro y pequeños negocios de Puebla.">
+<title>EmprendePuebla Digital | Impulsa tu negocio</title>
+<style>
+:root{--navy:#102a43;--blue:#176b87;--teal:#18a999;--mint:#e8f7f3;--cream:#f7f9fb;--ink:#243b53;--muted:#627d98;--white:#fff;--line:#d9e2ec;--gold:#f4b942}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{color:var(--blue)} .wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:800;font-size:1.05rem}
+.logo{width:42px;height:42px;flex:0 0 auto}
+nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;font-size:.88rem;font-weight:650;color:var(--ink)}
+nav a:hover{color:var(--teal)}
+.hero{background:linear-gradient(125deg,#102a43 0%,#176b87 62%,#18a999 100%);color:white;padding:76px 0 70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:30px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.08;margin:18px 0}
+.hero p{font-size:1.12rem;color:#e6f4f8;max-width:620px}
+.btn{display:inline-block;text-decoration:none;font-weight:750;padding:12px 20px;border-radius:12px;background:var(--gold);color:var(--navy);margin:12px 10px 0 0}
+.btn.secondary{background:transparent;color:white;border:1px solid rgba(255,255,255,.6)}
+.hero-art{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:28px;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.15)}
+.art-card{background:white;color:var(--navy);padding:20px;border-radius:18px;margin:12px 0;display:flex;align-items:center;gap:15px}
+.art-icon{width:52px;height:52px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:1.5rem}
+.art-card strong{display:block;font-size:1rem}.art-card small{color:var(--muted)}
+section{padding:72px 0;scroll-margin-top:85px}
+section:nth-of-type(even){background:var(--cream)}
+.section-head{max-width:760px;margin-bottom:32px}
+.kicker{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+h2{font-size:clamp(1.8rem,3.2vw,2.8rem);line-height:1.18;color:var(--navy);margin:8px 0 14px}
+h3{color:var(--navy);margin:0 0 8px}
+.lead{font-size:1.08rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 25px rgba(16,42,67,.04)}
+.card p{margin:8px 0;color:var(--muted)}
+.icon{font-size:1.8rem;margin-bottom:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.pill{display:inline-block;background:var(--mint);color:#087f70;border-radius:30px;padding:5px 11px;font-size:.78rem;font-weight:800;margin:4px}
+.list{padding-left:20px}.list li{margin:7px 0}
+.callout{background:var(--navy);color:white;padding:26px;border-radius:20px}
+.callout h3{color:white}.callout p{color:#dceaf3}
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.swot div{padding:18px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.swot strong{color:var(--blue)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:white;border:1px solid var(--line);padding:18px;border-radius:14px}
+.step b{display:block;color:var(--teal);font-size:1.2rem}
+.legal-map{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:14px;align-items:center;margin-top:24px}
+.legal-center{background:var(--navy);color:white;border-radius:22px;padding:26px;text-align:center;font-weight:800;font-size:1.2rem}
+.legal-box{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;text-align:center}
+.legal-box b{display:block;color:var(--blue);margin-bottom:5px}
+.ods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ods-card{border-radius:16px;padding:18px;background:white;border:1px solid var(--line);text-align:center}
+.ods-num{font-size:2rem;font-weight:900;color:var(--teal)}
+.video{background:#edf3f7;border:2px dashed #9fb3c8;border-radius:18px;padding:30px;text-align:center}
+.video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;margin-top:14px}
+.funding{border-left:4px solid var(--teal);padding:4px 0 4px 18px;margin:18px 0}
+.note{font-size:.88rem;color:var(--muted)}
+.contact{background:linear-gradient(120deg,#e8f7f3,#eef5fa)}
+.contact-box{background:white;border-radius:22px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+input,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;margin:6px 0 12px}
+button{border:0;background:var(--teal);color:white;padding:13px 18px;border-radius:10px;font-weight:800;cursor:pointer}
+footer{background:var(--navy);color:#dceaf3;padding:30px 0}
+footer a{color:#b9eee5}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:850px){.hero-grid,.two,.contact-box{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.ods{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.nav{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}.legal-map{grid-template-columns:1fr}.hero{padding:50px 0}}
+@media(max-width:520px){.grid,.swot{grid-template-columns:1fr}.hero-art{padding:12px}section{padding:52px 0}}
+
+.canva-embed{width:100%;border:0;border-radius:16px;background:#f7f8fa;box-shadow:0 10px 28px rgba(20,35,55,.08)}
+.canva-frame{position:relative;width:100%;aspect-ratio:16/9;margin:18px 0 10px;overflow:hidden;border-radius:16px}
+.canva-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.resource-link{display:inline-flex;align-items:center;gap:8px;margin:8px 8px 0 0;padding:10px 15px;border-radius:999px;background:var(--teal);color:white;text-decoration:none;font-weight:700}
+.resource-note{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#inicio" aria-label="EmprendePuebla Digital, inicio">
+   <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Logo EmprendePuebla Digital">
+    <rect x="2" y="2" width="60" height="60" rx="18" fill="#102a43"/>
+    <path d="M14 43V28h9v15M27 43V20h9v23M40 43V12h9v31" fill="none" stroke="#18a999" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 48h40" stroke="#f4b942" stroke-width="4" stroke-linecap="round"/>
+   </svg>
+   <span>EmprendePuebla<br><small style="font-weight:600;color:#18a999">DIGITAL</small></span>
+  </a>
+  <nav aria-label="Navegación principal">
+   <a href="#nosotros">Quiénes somos</a><a href="#contexto">Contexto</a><a href="#idea">Servicios</a><a href="#estrategia">Estrategia</a><a href="#legal">Marco legal</a><a href="#ods">ODS y RSE</a><a href="#financiamiento">Financiamiento</a><a href="#contacto">Contacto</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow">Tecnología con impacto local</span>
+   <h1>Tu negocio local.<br>Un mundo de oportunidades.</h1>
+   <p>Impulsamos a micro y pequeños negocios de Puebla con herramientas digitales sencillas para mostrar sus productos, conectar con clientes y fortalecer sus ventas.</p>
+   <a class="btn" href="#idea">Conoce nuestros servicios</a>
+   <a class="btn secondary" href="#contacto">Quiero impulsar mi negocio</a>
+  </div>
+  <div class="hero-art" aria-label="Ilustración de servicios digitales">
+   <div class="art-card"><div class="art-icon">🛍️</div><div><strong>Catálogo digital</strong><small>Productos visibles en línea</small></div></div>
+   <div class="art-card"><div class="art-icon">📣</div><div><strong>Promoción local</strong><small>Más conexión con tus clientes</small></div></div>
+   <div class="art-card"><div class="art-icon">📈</div><div><strong>Capacitación práctica</strong><small>Crece con herramientas digitales</small></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="nosotros">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">01 · Quiénes somos</span><h2>Digitalizamos oportunidades, fortalecemos comunidades.</h2>
+   <p class="lead">EmprendePuebla Digital es una startup en etapa de desarrollo que busca acercar soluciones digitales accesibles a los negocios locales de Puebla.</p></div>
+  <div class="grid">
+   <article class="card"><div class="icon">🎯</div><h3>Misión</h3><p>Facilitar la transformación digital de micro y pequeños negocios mediante catálogos, promoción y capacitación accesibles, para mejorar su visibilidad y competitividad.</p></article>
+   <article class="card"><div class="icon">🌟</div><h3>Visión</h3><p>Ser una plataforma reconocida en Puebla por conectar negocios locales con consumidores y oportunidades de crecimiento digital sostenible.</p></article>
+   <article class="card"><div class="icon">🚀</div><h3>Objetivos</h3><p>Crear una plataforma funcional, sumar negocios locales, capacitar emprendedores y evaluar el impacto en su presencia digital y oportunidades comerciales.</p></article>
+  </div>
+  <div class="callout" style="margin-top:20px"><h3>Objetivos SMART · propuesta inicial</h3><p>Durante los primeros 12 meses de operación: desarrollar y probar la plataforma, incorporar una primera comunidad de negocios y medir periódicamente su uso y satisfacción. Las metas numéricas deberán definirse con base en presupuesto, capacidad operativa y validación del mercado.</p></div>
+ </div>
+</section>
+
+<section id="contexto">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">02 · Nuestro contexto</span><h2>Una oportunidad en la digitalización de los negocios locales</h2>
+  <p class="lead">El proyecto parte de una necesidad a validar: muchos pequeños comercios requieren una forma práctica y económica de presentar su oferta en internet y aprender a promocionarla.</p></div>
+  <div class="two">
+   <div class="card"><h3>Análisis del entorno · PESTEL</h3>
+    <ul class="list"><li><b>Político:</b> programas públicos de impulso a MIPYMES pueden abrir oportunidades.</li><li><b>Económico:</b> los negocios buscan soluciones de bajo costo y retorno visible.</li><li><b>Social:</b> consumidores usan canales digitales para descubrir productos y servicios.</li><li><b>Tecnológico:</b> redes sociales, teléfonos inteligentes y pagos digitales facilitan la adopción.</li><li><b>Ambiental:</b> la difusión digital puede reducir materiales promocionales impresos.</li><li><b>Legal:</b> se deben proteger datos personales, derechos de consumidores y contenidos.</li></ul>
+   </div>
+   <div class="card"><h3>Estudio de mercado · hipótesis</h3>
+    <ul class="list"><li><b>Clientes:</b> micro y pequeños comercios, productores y prestadores de servicios en Puebla.</li><li><b>Necesidad:</b> presencia digital sencilla, promoción local y conocimientos prácticos.</li><li><b>Alternativas:</b> redes sociales, marketplaces, directorios y creación independiente de páginas.</li><li><b>Diferenciador:</b> enfoque local, acompañamiento y capacitación en una sola propuesta.</li><li><b>Validación:</b> entrevistas, encuesta, prueba piloto y análisis de uso antes de escalar.</li></ul>
+   </div>
+  </div>
+  <div class="section-head" style="margin-top:30px"><h3>Análisis FODA</h3></div>
+  <div class="swot">
+   <div><strong>Fortalezas</strong><p>Enfoque local; propuesta integrada de catálogo, promoción y capacitación.</p></div>
+   <div><strong>Oportunidades</strong><p>Digitalización de MIPYMES y alianzas con cámaras, universidades y programas de apoyo.</p></div>
+   <div><strong>Debilidades</strong><p>Marca nueva; requiere recursos tecnológicos, contenidos y captación inicial.</p></div>
+   <div><strong>Amenazas</strong><p>Competencia de plataformas consolidadas, cambios tecnológicos y baja adopción digital.</p></div>
+  </div>
+  <p class="note">Este análisis es cualitativo y preliminar; debe complementarse con datos de encuesta, entrevistas y fuentes estadísticas para presentar resultados de mercado comprobados.</p>
+ </div>
+</section>
+
+<section id="idea">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">03 · Idea de negocio</span><h2>Herramientas digitales que trabajan contigo</h2><p class="lead">Servicios diseñados para que los negocios locales presenten su oferta y desarrollen habilidades digitales.</p></div>
+  <div class="grid">
+   <article class="card"><div class="icon">🧾</div><h3>Catálogo digital</h3><p>Espacio para organizar productos o servicios con fotografías, descripción, precios referenciales y medios de contacto del negocio.</p><span class="pill">Visibilidad en línea</span></article>
+   <article class="card"><div class="icon">📍</div><h3>Promoción local</h3><p>Difusión de negocios y ofertas para facilitar que clientes de la comunidad descubran opciones cercanas.</p><span class="pill">Comunidad</span></article>
+   <article class="card"><div class="icon">🎓</div><h3>Capacitación digital</h3><p>Materiales y talleres introductorios sobre presencia digital, contenidos, atención al cliente y herramientas de venta en línea.</p><span class="pill">Aprendizaje práctico</span></article>
+  </div>
+  <div class="two" style="margin-top:24px">
+   <div><h3>¿Cómo funciona?</h3><div class="steps">
+    <div class="step"><b>01</b>Registro del negocio</div><div class="step"><b>02</b>Creación del catálogo</div><div class="step"><b>03</b>Difusión y contacto</div><div class="step"><b>04</b>Capacitación y mejora</div>
+   </div></div>
+   <div class="card"><h3>Modelo de negocio · propuesta</h3><p>Modelo freemium por validar: presencia básica gratuita para atraer negocios y servicios opcionales de valor agregado, como promoción destacada, asesoría o talleres especializados. Los precios se definirán después de probar disposición de pago.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="estrategia">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">04 · Nuestra estrategia</span><h2>Plan de negocio: de la idea a una plataforma útil</h2><p class="lead">La estrategia combina validación de mercado, desarrollo gradual, alianzas y medición de resultados.</p></div>
+  <div class="grid">
+   <article class="card"><h3>Propuesta de valor</h3><p>Una solución accesible y cercana para que pequeños negocios mejoren su presencia digital sin tener que dominar herramientas complejas.</p></article>
+   <article class="card"><h3>Segmento y canales</h3><p>Micro y pequeños negocios de Puebla. Captación mediante redes sociales, alianzas comunitarias, universidades, eventos y recomendaciones.</p></article>
+   <article class="card"><h3>Recursos y actividades</h3><p>Plataforma web, equipo de contenidos y soporte, capacitación, promoción, mantenimiento y protección de datos.</p></article>
+   <article class="card"><h3>Ingresos potenciales</h3><p>Servicios premium, publicidad local identificada, talleres y acompañamiento personalizado, sujeto a validación.</p></article>
+   <article class="card"><h3>Costos principales</h3><p>Desarrollo y hosting, dominio, diseño, promoción, soporte, capacitación, administración y cumplimiento legal.</p></article>
+   <article class="card"><h3>Indicadores</h3><p>Negocios registrados y activos, catálogos publicados, uso de la plataforma, satisfacción, retención y costo de adquisición.</p></article>
+  </div>
+  <div class="callout" style="margin-top:22px"><h3>Esquema del plan de negocios</h3><p>Problema y oportunidad → propuesta de valor → mercado y competencia → modelo de ingresos → estrategia comercial → operación y tecnología → marco legal → impacto ODS/RSE → financiamiento → indicadores y mejora continua.</p></div>
+  <div class="card" style="margin-top:22px"><h3>Plan de negocios completo en Canva</h3><p>Consulta la presentación elaborada para el proyecto. Si el visor no carga, abre el recurso directamente en Canva.</p><div class="canva-frame"><iframe class="canva-embed" src="https://www.canva.com/design/DAHVp2lBhRk/WwiNhcq2mxU4qOGb_tNkQQ/view?embed" title="Plan de negocios de EmprendePuebla Digital" loading="lazy" allowfullscreen></iframe></div><a class="resource-link" href="https://www.canva.com/design/DAHVp2lBhRk/WwiNhcq2mxU4qOGb_tNkQQ/view?utm_content=DAHVp2lBhRk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha51b778ba8#14" target="_blank" rel="noopener">Abrir plan de negocios en Canva ↗</a></div>
+ </div>
+</section>
+
+<section id="legal">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">05 · Marco legal</span><h2>Construimos confianza con cumplimiento y transparencia</h2><p class="lead">El marco normativo se presenta como una guía inicial para una plataforma digital en México. La aplicación exacta dependerá de cómo se registren usuarios, se publiquen ofertas, se procesen pagos y se presten servicios.</p></div>
+  <div class="legal-map" aria-label="Mapa mental del marco legal de EmprendePuebla Digital">
+   <div class="legal-box"><b>Empresa y operación</b><p>Código de Comercio<br>Código Civil aplicable<br>Reglas fiscales y municipales</p></div>
+   <div class="legal-center">EmprendePuebla<br>Digital<br><small style="font-weight:500">Cumplimiento legal</small></div>
+   <div class="legal-box"><b>Datos y privacidad</b><p>LFPDPPP<br>Aviso de privacidad<br>Medidas de seguridad</p></div>
+   <div class="legal-box"><b>Comercio electrónico</b><p>Ley Federal de Protección al Consumidor<br>Información clara y términos</p></div>
+   <div class="legal-box"><b>Marca y contenidos</b><p>Ley Federal de Protección a la Propiedad Industrial<br>Ley Federal del Derecho de Autor</p></div>
+   <div class="legal-box"><b>Trabajo y fiscal</b><p>LFT si hay personal<br>LISR, LIVA y CFF<br>Obligaciones según actividad</p></div>
+  </div>
+  <div class="two" style="margin-top:24px">
+   <div class="card"><h3>Obligaciones prácticas</h3><ul class="list"><li>Definir la figura jurídica y registrar la actividad económica que corresponda.</li><li>Publicar aviso de privacidad y recabar datos con finalidad informada.</li><li>Contar con términos y condiciones, reglas de publicación y mecanismos de contacto.</li><li>Respetar marcas, fotografías y contenidos; solicitar autorización para su uso.</li><li>Emitir comprobantes y cumplir obligaciones fiscales según el modelo de ingresos.</li><li>Revisar permisos y requisitos locales si existe establecimiento físico.</li></ul></div>
+   <div class="card"><h3>Mapa conceptual del marco legal en Canva</h3><p>Se integra el mapa conceptual del marco jurídico para complementar el esquema visual de esta página.</p><div class="canva-frame"><iframe class="canva-embed" src="https://www.canva.com/design/DAHXpwy2uMc/Lnl70tposE-vPLkS-cWQiQ/view?embed" title="Mapa conceptual del marco legal" loading="lazy" allowfullscreen></iframe></div><a class="resource-link" href="https://www.canva.com/design/DAHXpwy2uMc/Lnl70tposE-vPLkS-cWQiQ/view?utm_content=DAHXpwy2uMc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8ba3518f9e" target="_blank" rel="noopener">Abrir mapa conceptual en Canva ↗</a><p class="note">Recomendación: revisar el marco legal con asesoría profesional antes de iniciar operaciones o manejar pagos y datos sensibles.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="ods">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">06 · ODS y principios RSE</span><h2>Crecer con responsabilidad y generar impacto</h2><p class="lead">EmprendePuebla Digital vincula su propósito con los Objetivos de Desarrollo Sostenible y una cultura empresarial ética.</p></div>
+  <div class="ods">
+   <div class="ods-card"><div class="ods-num">8</div><h3>Trabajo decente y crecimiento económico</h3><p>Apoyar el desarrollo y la competitividad de pequeños negocios.</p></div>
+   <div class="ods-card"><div class="ods-num">9</div><h3>Industria, innovación e infraestructura</h3><p>Facilitar el acceso a herramientas e innovación digital.</p></div>
+   <div class="ods-card"><div class="ods-num">10</div><h3>Reducción de las desigualdades</h3><p>Promover acceso inclusivo a oportunidades digitales.</p></div>
+   <div class="ods-card"><div class="ods-num">12</div><h3>Producción y consumo responsables</h3><p>Impulsar prácticas de promoción y consumo local responsables.</p></div>
+  </div>
+  <div class="two" style="margin-top:24px">
+   <div class="card"><h3>Principios de responsabilidad social empresarial</h3><ul class="list"><li>Ética e integridad en las decisiones.</li><li>Transparencia en servicios, costos y comunicación.</li><li>Legalidad y respeto a los derechos de las personas.</li><li>Responsabilidad por los impactos sociales y ambientales.</li><li>Diálogo y respeto a clientes, negocios aliados y comunidad.</li><li>Mejora continua y sostenibilidad.</li></ul></div>
+   <div class="video"><h3>Video del proyecto: ODS y RSE</h3><p>Presentación audiovisual sobre los Objetivos de Desarrollo Sostenible y la responsabilidad social empresarial de EmprendePuebla Digital.</p>
+    <div class="canva-frame"><iframe class="canva-embed" src="https://www.canva.com/design/DAHZjBNBUII/cWKorRm_oqkjLUJqGZ1Wgg/watch?embed" title="Video de EmprendePuebla Digital sobre ODS y RSE" loading="lazy" allowfullscreen></iframe></div>
+    <a class="resource-link" href="https://www.canva.com/design/DAHZjBNBUII/cWKorRm_oqkjLUJqGZ1Wgg/watch?utm_content=DAHZjBNBUII&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9ecea4e0c8" target="_blank" rel="noopener">Ver video en Canva ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="financiamiento">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">07 · Financiamiento</span><h2>Aliados para convertir la idea en crecimiento</h2><p class="lead">Se consideran instituciones y organizaciones que pueden aportar inversión, acompañamiento, asesoría o conexiones. La disponibilidad y elegibilidad deben verificarse al momento de solicitar apoyo.</p></div>
+  <div class="two">
+   <div class="card">
+    <div class="funding"><h3>Angel Ventures</h3><p>Alternativa para explorar inversión y vinculación con redes de inversionistas, sujeto a etapa, tracción y criterios de selección.</p><a href="https://angelventures.vc/" target="_blank" rel="noopener">Sitio de Angel Ventures ↗</a></div>
+    <div class="funding"><h3>InnovaUNAM</h3><p>Posible acompañamiento de incubación y asesoría; revisar requisitos de vinculación y elegibilidad del proyecto.</p><a href="https://innova.unam.mx/" target="_blank" rel="noopener">Sitio de InnovaUNAM ↗</a></div>
+   </div>
+   <div class="card">
+    <div class="funding"><h3>Créame</h3><p>Organización de apoyo empresarial para explorar acompañamiento, desarrollo y expansión de emprendimientos.</p><a href="https://www.creame.com.co/" target="_blank" rel="noopener">Sitio de Créame ↗</a></div>
+    <div class="funding"><h3>Strategy&amp; / PwC</h3><p>Referencia para consultar análisis y orientación estratégica del ecosistema; no se presenta como una fuente directa de financiamiento.</p><a href="https://www.strategyand.pwc.com/" target="_blank" rel="noopener">Sitio de Strategy&amp; ↗</a></div>
+   </div>
+  </div>
+  <div class="callout" style="margin-top:22px"><h3>Conclusión sobre el financiamiento</h3><p>EmprendePuebla Digital debe iniciar con una estrategia financiera gradual y responsable. En la primera etapa se recomienda elaborar un presupuesto realista y validar el producto mínimo viable mediante recursos propios, apoyos académicos o programas de incubación y asesoría. Una vez que se demuestre demanda, se cuente con usuarios activos y exista evidencia de ingresos potenciales, podrá evaluarse la búsqueda de inversión ángel o alianzas estratégicas. Esta secuencia reduce el riesgo de endeudamiento prematuro, permite negociar con mayor claridad y orienta los recursos a actividades que generen valor. La obtención de apoyos dependerá de las convocatorias, requisitos y evaluación de cada institución.</p></div>
+  <p class="note">Estrategia financiera inicial: validar el producto mínimo viable, estimar costos y buscar primero acompañamiento e inversión compatible con la etapa del proyecto. No se da por aprobado ningún financiamiento.</p>
+ </div>
+</section>
+
+<section id="contacto" class="contact">
+ <div class="wrap">
+  <div class="section-head"><span class="kicker">08 · Contacto</span><h2>¿Listo para impulsar tu negocio?</h2><p class="lead">Conversemos sobre cómo una presencia digital puede abrir nuevas oportunidades para tu emprendimiento.</p></div>
+  <div class="contact-box">
+   <div><h3>EmprendePuebla Digital</h3><p>Plataforma en desarrollo para negocios de Puebla.</p><p><b>Correo:</b> <a href="mailto:contacto@emprendepuebladigital.mx">contacto@emprendepuebladigital.mx</a></p><p><b>Ubicación:</b> Puebla, México</p><p><b>Redes sociales:</b> agrega aquí los perfiles oficiales cuando estén creados.</p></div>
+   <form onsubmit="event.preventDefault();alert('Este formulario es una maqueta. Configura un servicio de formularios o correo antes de publicar.');">
+    <label for="nombre">Nombre</label><input id="nombre" name="nombre" required placeholder="Tu nombre">
+    <label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" required placeholder="tucorreo@ejemplo.com">
+    <label for="mensaje">¿Cómo podemos ayudarte?</label><textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu negocio"></textarea>
+    <button type="submit">Enviar mensaje</button><p class="note">Formulario de demostración; debe conectarse antes de recibir mensajes reales.</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap foot"><div><b>EmprendePuebla Digital</b><br><small>Impulsando negocios locales con tecnología.</small></div><div><a href="#inicio">Inicio</a> · <a href="#legal">Marco legal</a> · <a href="#contacto">Contacto</a><br><small>© 2026 EmprendePuebla Digital · Proyecto académico</small></div></div>
+</footer>
+</body>
+</html>
